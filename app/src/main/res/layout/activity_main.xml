@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0E8BB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/hadder"
+        android:background="@drawable/tool_bar_main"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#689F38"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="@color/white"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/chatbot_head" />
+
+        <TextView
+            android:layout_width="167dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Chat Bot 2.O"
+            android:textColor="#550477"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="1dp"
+            android:backgroundTint="#689F38"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/imageExit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_backspace_24"
+                app:tint="#D30505"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="558dp"
+        android:layout_above="@+id/layout"
+        android:layout_below="@+id/hadder"
+        android:layout_marginBottom="0dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/welcome_text"
+        android:gravity="center"
+        android:text="Welcome to Chat Bot 2.O \n Try It Out Now"
+        android:textColor="#7E7878"
+        android:textSize="28dp">
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/text_message"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/send_btn"
+            android:background="@drawable/rounded_corner"
+            android:hint="Write Text"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="#595757" />
+
+        <ImageButton
+            android:id="@+id/send_btn"
+            android:layout_width="41dp"
+            android:layout_height="47dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/send" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
